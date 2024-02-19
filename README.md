@@ -1,4 +1,4 @@
-(![제목을-입력해주세요_-001](https://github.com/hojimint/Zero_Base/assets/83691399/959a71e0-e17f-45c0-a72d-e468806b1c43))
+![제목을-입력해주세요_-001](https://github.com/hojimint/Zero_Base/assets/83691399/959a71e0-e17f-45c0-a72d-e468806b1c43)
 
 ---
 ## Introduction
