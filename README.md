@@ -66,23 +66,18 @@
 
 
 ### 문자열 데이터 처리
-<p align='center'><![스크린샷 2024-02-17 132807](https://github.com/DS-21-DL-project/youquiz/assets/83691399/ec27bd9d-f5bd-404c-a075-aee44d7b24e6)></p>
+![스크린샷 2024-02-17 132807](https://github.com/DS-21-DL-project/youquiz/assets/83691399/ec27bd9d-f5bd-404c-a075-aee44d7b24e6)
+- `직업`, `성별`, `나이`, `인지도`, `수상여부` 컬럼의 데이터를 LabelEncoder를 사용하여 숫자 데이터로 변경하였습니다.
 
-- `PR`, `TG`, `LDL`, `HDL`, `Alb`, `ALP` 피처에서 결측치가 존재 했습니다.
-    - `PR`의 경우 나이대 별 중위값으로 값을 대체 하였습니다.
-    - `TG`의 경우 `TC = LDL + HDL + TG/5`의 산식을 이용해 대체 했습니다.
-    - 254번 인덱스의 경우 `TG`, `LDL`, `HDL`, `Alb`, `AlP` 모두 존재하지 않아 데이터를 삭제 하였습니다.
+### 아웃라이어 제거
+- pairplot으로 데이터 셋을 나타내어 데이터 분포를 확인해 보면 다음과 같이 한가지 데이터의 크기가 커서 아웃라이어 데이터를 정리해 주었습니다.
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/77066a9d-4c86-4e68-867e-e09778d87a24)
 
-### 데이터 범주화
-- [컬럼 정의 및 분류 기준](https://docs.google.com/document/d/1r3cG6r4KdIx6VLw8R8tiUZr7N-1v2GtEt5wEvDYpa18/edit#heading=h.z2foisebalcq)을 바탕으로 정상 또는 판단 기준 범위에 따라 나눴습니다.
 
 ### 파생변수 생성
-- 당뇨병 유관 질병
-    - `DLP(이상지질혈증)`, `MS(대사증후군)`
-- 당뇨병 진단과 관련 된 검사
-    - `맥압`
-    - `BUN/Cr` 비율
-    - `AST/ALT` 비율
+- 날짜 데이터 백터값 추가(?)
+    - `추가 바람
+
 
 ### EDA
 :bar_chart: **Feature별 분포도**
