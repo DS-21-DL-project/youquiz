@@ -60,7 +60,7 @@
 
 ### 유튜브 데이터
 ![003](https://github.com/hojimint/Zero_Base/assets/83691399/0625c014-68e2-407f-ac5a-7f729ff883c3)
-제목, 조회수, 좋아요 수, 댓글 수, 재생시간, 회차, 구독자 수 데이터 수집
+제목, 조회수, 좋아요 수, 댓글 수, 재생시간, 회차 데이터 수집
 
 ### 직접 입력 데이터
 ![004](https://github.com/hojimint/Zero_Base/assets/83691399/05861a81-e16c-4f9e-9b0b-8fc60fea7914)
@@ -69,16 +69,105 @@
 
 ---
 
-## 5. 모델링<a class="anchor" id = "c4"> </a>
+## 5. 모델링
 
-### 모델링 과정
+### 시청률 예측
 
-![image](https://user-images.githubusercontent.com/38115693/147495960-f9e2e82c-6d3d-4d84-a875-f63e3d33732a.png)
+![제목을 입력해주세요_-005](https://github.com/DS-21-DL-project/youquiz/assets/83691399/6b1222a6-9fec-4f2a-b300-ed990001f2ed)
 
-모델링은 크게 세 가지 과정을 거친다.
-1. 데이터 전처리
-2. Imbalanced 데이터 처리를 위한 오버샘플링
-3. 파라미터 튜닝
+#### 첫번째 시도
+
+X = df[['직업', '성별', '나이', '구독자수', '수상여부', '인지도']]
+y = df[['시청률']]
+X, y 컬럼을 다음과 같이 지정하여 
+
+GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 GridSearchCV를 사용하여 최적의 하이퍼 파라메터값을 적용해 주었습니다.
+
+이후 MAE, MAPE를 구하여 지표를 확인해 보았습니다.
+
+![중간-발표-019](https://github.com/DS-21-DL-project/youquiz/assets/83691399/8c775030-2632-485f-b43f-3d79df8b40cb)
+
+- GradientBoostingRegressor
+ - MAE: 0.28
+ - MAPE: 6.38%
+
+- XGBRegressor
+ - MAE: 0.30
+ - MAPE: 7.17%
+
+- RandomForestRegressor
+ - MAE: 0.45
+ - MAPE: 10.39%
+
+#### 참고
+```
+MAE :  예측값과 실제값 간의 평균적인 절대 오차를 나타냅니다.
+       MAE가 0에 가까울수록 모델의 예측이 좋다고 평가할 수 있습니다.
+
+MAPE : 예측값과 실제값 간의 평균적인 백분율 오차를 나타냅니다.
+       MAPE가 0에 가까울수록 모델의 예측이 좋다고 평가할 수 있습니다.
+```
+
+
+#### 두번째 시도
+
+
+첫번째 시도에서는 생각하지 못했던 방법들을 추가하여 보완하였습니다.
+1. 날짜 데이터를 사인과 코사인으로 변환하여 새로운 컬럼으로 추가
+2. RobustScaler, StandardScaler, MinMaxScaler 스케일링을 시도하여 최적의 하이퍼 파라메터 찾아보기
+3. SVR 모델을 추가로 시도 해보기
+
+날짜 컬럼을 년, 월, 일 컬럼으로 분리하고 해당 데이터들을 sin, cos으로 변환해 데이터의 주기성을 학습하고, 주기적인 패턴을 잡아내기 쉬워도록 하였습니다.
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/8bd8c855-3466-439e-8232-d28a6d306692)
+
+3종류의 스케일링 기법을 총 4가지의 모델에 최적의 하이퍼 파라메터 값을 구하여 총 12가지의 경우의 수에 대해서 시도하여 어떤 경우에 가장 최적의 모델이 나오는지 여부를 확인해 보았습니다.
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/3b3020b9-691f-4294-aeab-4e1b3b8d51d7)
+
+
+- StandardScaler
+
+ - Random Forest - MAE : 0.23 MAPE : 0.05%
+ - Gradient Boosting - MAE : 0.15, MAPE:0.03%
+ - XGBoost - MAE : 0.8, MAPE:0.2%
+ - SVN - MAE : 0.46, MAPE:0.1%
+
+- MinMaxScaler
+
+ - Random Forest - MAE : 0.23 MAPE : 0.05%
+ - Gradient Boosting - MAE : 0.17, MAPE:0.04%
+ - XGBoost - MAE : 0.79, MAPE:0.2%
+ - SVN - MAE : 0.48, MAPE:0.11%
+
+- RobustScaler
+
+ - Random Forest - MAE : 0.2 MAPE : 0.04%
+ - Gradient Boosting - MAE : 0.16, MAPE:0.04%
+ - XGBoost - MAE : 0.79, MAPE:0.2%
+ - SVN - MAE : 0.47, MAPE:0.1%
+
+가장 좋은 결과를 보여준 StandardScaler와 Gradient Boosting의 조합데이터의 실제 값과 예측값을 시각화 해보면 다음과 같은 그래프가 그려지게 되는데
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/2237ab09-c7e2-454f-96da-beaa93db6789)
+
+여기서 눈에 띄게 예측을 벗어난 2개의 데이터를 추척해보도록 해보았습니다.
+
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/7abe1dad-3491-461a-8b83-138b27b9f6dc)
+
+
+가장 큰 에러를 가진 데이터 포인트의 에러 값: [1.0684939 1.484873 ]
+     출연자  조회수  좋아요수  댓글수  재생시간(초)   구독자수  term  시청률    직업 성별  나이 수상여부 인지도    날짜  
+22   김현지   68     0    0      185      0  1290  2.5    기타  F  청년    N   N   22   2019-11-26  
+104  홍동규   38     0    0      208  60000  1271  2.3  사회복지  M  중년    N   N   104 2019-11-05  
+
+다음과 같은 두 데이터인데 유퀴즈 유튜브가 만들어 진지 얼마 되지 않았던 시기라 가장 앞서 EDA에서 확인한 시청률과 가장 큰 상관관계를 가지는 구독자 수가 너무 낮아 이런 결과가 나온게 아닌가 생각됩니다.
+
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/bf4df2d7-bbe4-42f6-8710-737ada7eec60)
+
+해당 데이터 또한 이상치 일지도 모른다고 생각하여 데이터를 지우고 다시한번 모델을 돌려 보았으나 정확도는 더 떨어지는 결과가 나왔습니다.
+
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/8f5c3e32-892d-4948-9681-a15018f0f907)
+
+
+
 
 ### 사용한 데이터 처리 기법 및 학습/예측 모델
 
