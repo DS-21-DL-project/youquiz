@@ -391,26 +391,26 @@ MAPE: 3403.23
 4. 조회수와 많은 상관관계를 가지고있는 좋아요와 댓글수 데이터를 추가해보기
 
 
+날짜 컬럼을 년, 월, 일 컬럼으로 분리하고 해당 데이터들을 sin, cos으로 변환해 데이터의 주기성을 학습하고, 주기적인 패턴을 잡아내기 쉬워도록 하였습니다.
+
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/8bd8c855-3466-439e-8232-d28a6d306692)
+
+조회수 데이터의 경우 이상치라고 부를 만큰 편차가 큰 데이터셋이여서 이상치에 강한 RobustScaler 스케일러를 사용하였습니다.
+
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/f6f88f21-7c3c-4783-9166-ac954be0372e)
 
 
+좋아요 수와 댓글수를 포함하여 진행한 결과 다음과 같이 예측 성능이 극적으로 올라간 것을 확인할 수 있었습니다.
+
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/40586fb3-6d5d-44cd-8ee8-e90547b8abf6)
 
 
-
-
-
-
-
-
-
-
-
-
-```
-Random Forest - MAE : 0.33 MAPE : 0.03%
-Gradient Boosting - MAE : 0.3, MAPE:0.03%
-XGBoost - MAE : 1.67, MAPE:0.19%
-SVN - MAE : 0.51, MAPE:0.06%
-```
+| 모델               | MAE  | MAPE   |
+|---------------------|------|--------|
+| Random Forest       | 0.33 | 0.03%  |
+| Gradient Boosting   | 0.3  | 0.03%  |
+| XGBoost             | 1.67 | 0.19%  |
+| SVN                 | 0.51 | 0.06%  |
 
 
 
