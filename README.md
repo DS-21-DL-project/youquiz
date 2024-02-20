@@ -236,19 +236,11 @@ GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 Grid
 
 ![중간-발표-019](https://github.com/DS-21-DL-project/youquiz/assets/83691399/8c775030-2632-485f-b43f-3d79df8b40cb)
 
-```
-- GradientBoostingRegressor
- - MAE: 0.28
- - MAPE: 6.38%
-
-- XGBRegressor
- - MAE: 0.30
- - MAPE: 7.17%
-
-- RandomForestRegressor
- - MAE: 0.45
- - MAPE: 10.39%
-```
+| 모델                      | MAE  | MAPE   |
+|---------------------------|------|--------|
+| GradientBoostingRegressor | 0.28 | 6.38%  |
+| XGBRegressor              | 0.30 | 7.17%  |
+| RandomForestRegressor     | 0.45 | 10.39% |
 
 #### 참고
 ```
@@ -277,28 +269,36 @@ MAPE : 예측값과 실제값 간의 평균적인 백분율 오차를 나타냅�
 ![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/3b3020b9-691f-4294-aeab-4e1b3b8d51d7)
 
 </br></br>
-```
+
+
 - StandardScaler
 
-  - Random Forest - MAE : 0.23 MAPE : 0.05%
-  - Gradient Boosting - MAE : 0.15, MAPE:0.03%
-  - XGBoost - MAE : 0.8, MAPE:0.2%
-  - SVN - MAE : 0.46, MAPE:0.1%
+| 모델                | MAE  | MAPE   |
+|---------------------|------|--------|
+| Random Forest       | 0.23 | 0.05%  |
+| Gradient Boosting   | 0.15 | 0.03%  |
+| XGBoost             | 0.8  | 0.2%   |
+| SVN                 | 0.46 | 0.1%   |
 
 - MinMaxScaler
 
-  - Random Forest - MAE : 0.23 MAPE : 0.05%
-  - Gradient Boosting - MAE : 0.17, MAPE:0.04%
-  - XGBoost - MAE : 0.79, MAPE:0.2%
-  - SVN - MAE : 0.48, MAPE:0.11%
+| 모델                | MAE  | MAPE   |
+|---------------------|------|--------|
+| Random Forest       | 0.23 | 0.05%  |
+| Gradient Boosting   | 0.17 | 0.04%  |
+| XGBoost             | 0.79 | 0.2%   |
+| SVN                 | 0.48 | 0.11%  |
 
 - RobustScaler
 
-  - Random Forest - MAE : 0.2 MAPE : 0.04%
-  - Gradient Boosting - MAE : 0.16, MAPE:0.04%
-  - XGBoost - MAE : 0.79, MAPE:0.2%
-  - SVN - MAE : 0.47, MAPE:0.1%
-```
+| 모델                | MAE  | MAPE   |
+|---------------------|------|--------|
+| Random Forest       | 0.2  | 0.04%  |
+| Gradient Boosting   | 0.16 | 0.04%  |
+| XGBoost             | 0.79 | 0.2%   |
+| SVN                 | 0.47 | 0.1%   |
+
+
 </br></br>
 가장 좋은 결과를 보여준 StandardScaler와 Gradient Boosting의 조합데이터의 실제 값과 예측값을 시각화 해보면 다음과 같은 그래프가 그려지게 되는데
 
@@ -343,19 +343,13 @@ GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 Grid
 
 ![중간-발표-020 (1)](https://github.com/DS-21-DL-project/youquiz/assets/83691399/63332f6e-69bc-45c3-a4e6-0d925a043ecb)
 
-```
-GradientBoostingRegressor
-MAE: 351866.50
-MAPE: 2282.54 %
 
-XGBRegressor
-MAE: 323278.39
-MAPE: 3079.86%
+| 모델                      | MAE        | MAPE      |
+|---------------------------|------------|-----------|
+| GradientBoostingRegressor | 351,866.50 | 2,282.54% |
+| XGBRegressor              | 323,278.39 | 3,079.86% |
+| RandomForestRegressor     | 321,701.03 | 3,403.23% |
 
-RandomForestRegressor
-MAE: 321701.03
-MAPE: 3403.23
-```
 오차 범위가 보다 싶이 굉장히 많이 나서 개선이 많이 필요해 보입니다.
 
 
