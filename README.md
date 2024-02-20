@@ -455,7 +455,7 @@ GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 Grid
 MAE 값은 위 모델 보다는 떨어지지만 예측 성능은 이 쪽이 더 뛰어나다는 결론이 나왔습니다.
 
 
-** 결론 **
+#### 결론
 민형기 교수님이 출연하게 된다면 시청율은 대략 4.7% 대가 나오며 조회수는 4~50만 정도가 나온다고 볼 수 있겠습니다.
 
 ---
