@@ -411,9 +411,9 @@ GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 Grid
 
 ※ 좋아요 수와 댓글 수는 최근 1년간의 평균값으로 하였고 재생시간은 302초로 임의값으로 하였습니다.
 
-![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/8b0e0a4e-b0ca-46be-9727-a82151e1dd7b)
-
 #### 시청률
+
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/8b0e0a4e-b0ca-46be-9727-a82151e1dd7b)
 
 ![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/feefa278-073c-4201-8371-5de4ff3a7884)
 
@@ -431,11 +431,32 @@ GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 Grid
 
 #### 조회수
 
+![image](https://github.com/DS-21-DL-project/youquiz/assets/83691399/a0ecf087-ff45-461b-9e52-ee30589bfcaa)\
+
+시청률과 마찬가지로 조회수 데이터도 위에서 구한 가장 우수햇던 기법으로 예측해 보았습니다.
+
+| 모델               | 조회수 |
+|---------------------|------|
+| Random Forest       | 94178|
+| Gradient Boosting   | 94877 |
+| XGBoost             | 70820 |
+| SVN                 | 50682 |
+
+조회수의 1년동안 평균치가 40만 정도 인데 결과 수치를 보면 뭔가 잘못된 것을 알 수 있었습니다.
+
+데이터 수에 비해서 여러가지 기법을 사용하여 만들다보니 모델이 심하게 과적합이 일어 났다고 가정하고 이전에 log까지만 취한 상태로 다시한번 더 측정 해 보았습니다.
 
 
+| 모델               | 조회수 |
+|---------------------|------|
+| Random Forest       | 488805|
+| Gradient Boosting   | 555650 |
+
+MAE 값은 위 모델 보다는 떨어지지만 예측 성능은 이 쪽이 더 뛰어나다는 결론이 나왔습니다.
 
 
-
+** 결론 **
+민형기 교수님이 출연하게 된다면 시청율은 대략 4.7% 대가 나오며 조회수는 4~50만 정도가 나온다고 볼 수 있겠습니다.
 
 ---
 
