@@ -55,7 +55,7 @@
 ### 유튜브 데이터
 ![003](https://github.com/hojimint/Zero_Base/assets/83691399/0625c014-68e2-407f-ac5a-7f729ff883c3)
 
-제목, 조회수, 좋아요 수, 댓글 수, 재생시간, 회차 데이터 수집
+제목, 조회수, 좋아요 수, 댓글 수, 재생시간, 회차, 구독자 수 데이터 수집
 
 ### 직접 입력 데이터
 ![004](https://github.com/hojimint/Zero_Base/assets/83691399/05861a81-e16c-4f9e-9b0b-8fc60fea7914)
