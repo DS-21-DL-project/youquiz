@@ -62,9 +62,10 @@
 
 직업군, 성별, 나이 데이터 수집
 
-
 ---
 ## 3. 데이터 분석 & 시각화
+
+![제목을 입력해주세요_-005 (2)](https://github.com/DS-21-DL-project/youquiz/assets/83691399/c8f1545b-1462-4cee-806f-9d8a7a66e773)
 
 ### EDA
 
