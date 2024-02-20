@@ -424,6 +424,6 @@ GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 Grid
 ---
 ## 6. 참고 문헌
 - [나무위키 - 1](https://namu.wiki/w/%EC%9C%A0%20%ED%80%B4%EC%A6%88%20%EC%98%A8%20%EB%8D%94%20%EB%B8%94%EB%9F%AD/%EB%B6%80%EC%A0%9C%20%EB%B0%8F%20%EC%8B%9C%EC%B2%AD%EB%A5%A0)
-- [나무위키 - 2](http://www.koreanhypertension.org/](https://namu.wiki/w/%EC%9C%A0%20%ED%80%B4%EC%A6%88%20%EC%98%A8%20%EB%8D%94%20%EB%B8%94%EB%9F%AD/%EC%83%81%EA%B8%88%20%EC%88%98%EB%A0%B9%EC%9E%90)
-- [유튜브 api v3](https://www.kosso.or.kr/](https://console.cloud.google.com/apis/library/youtube.googleapis.com?hl=ko&project=braided-city-312905)
+- [나무위키 - 2](https://namu.wiki/w/%EC%9C%A0%20%ED%80%B4%EC%A6%88%20%EC%98%A8%20%EB%8D%94%20%EB%B8%94%EB%9F%AD/%EC%83%81%EA%B8%88%20%EC%88%98%EB%A0%B9%EC%9E%90)
+- [유튜브 api v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?hl=ko&project=braided-city-312905)
 - [캐글](https://ko.wikipedia.org/wiki/%EB%8B%B9%EB%87%A8%EB%B3%91](https://www.kaggle.com/code/serigne/stacked-regressions-top-4-on-leaderboard)https://www.kaggle.com/code/serigne/stacked-regressions-top-4-on-leaderboard)
