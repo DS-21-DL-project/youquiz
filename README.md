@@ -217,7 +217,7 @@
 
 
 
-## 5. 모델링
+## 4. 모델링
 
 ### 시청률 예측
 ![제목을 입력해주세요_-005 (1)](https://github.com/DS-21-DL-project/youquiz/assets/83691399/bc218c68-9a6a-4ec1-944e-ea524c58b0a5)
@@ -407,30 +407,22 @@ GradientBoostingRegressor, XGBRegressor, RandomForestRegressor 모델들을 Grid
 | SVN                 | 0.51 | 0.06%  |
 
 
-
-
-
-
-
-
-
-
 ---
 
-## 6. 프로젝트 한계 및 과제
+## 5. 프로젝트 한계 및 과제
 ### 한계점
-- 모델을 충분히 학습시키고 더 좋은 성과를 내기에는 데이터가 조금 부족 했었습니다. 만약 시간과 데이터가 더 주어진다면, 더 좋은 모형을 만들어 정확한 예측을 할 수 있을 거라 생각합니다. 
-- 데이터에 대한 설명이 부족했습니다. 최대한 정보를 모아 데이터를 이해해 모델을 학습시켰지만, 아쉽게도 버려야 하는 컬럼들이 존재했습니다. 활용하지 못한 변수도 포함해 적용해 본다면, 더 나은 성과를 내지 않았을까 생각됩니다.
-- 의료 데이터에 대한 지식이 부족해 간단한 관계들만 확인 해 보았다는 것이 아쉬움이 큽니다. 
+- 모델을 충분히 학습시키고 더 좋은 성과를 내기에는 데이터가 조금 부족 했었습니다. 만약 시간과 데이터가 더 주어진다면, 더 좋은 모델을 만들어 정확한 예측을 할 수 있을 거라 생각합니다. 
+- 직업군 분류 작업이 잘 진행 되지 않았던거 같습니다. 직접 크롤링을 하여 얻은 데이터를 3명이서 분류를 진행하다보니 기준이 저마다 다르거나 애매한 경우가 있어 직업군별 분류가 좋지 못한 결과가 나온거 같습니다.
+- 최대한 정보를 모아 데이터를 이해해 모델을 학습시켰지만, 아쉽게도 버려야 하는 컬럼들이 존재했습니다. 활용하지 못한 변수도 포함해 적용해 본다면, 더 나은 성과를 내지 않았을까 생각됩니다.
 - 각 수치들이 학회 및 연구 별로 다양한 방법으로 범주화를 적용하고 있습니다. 우리는 그 중 하나의 방법으로만 적용해 보았는데, 다양한 기준점을 갖고 값을 그룹화 했었으면 어땠을 까하는 아쉬움이 남았습니다.
 
 ### 향후 과제
-- 각 컬럼별로 성별과 연령대로 나눠 범주화 한 기준들이 존재했습니다. 이를 적용해 값들을 세분화하여 적용해 보면 좋을 것 같습니다.
-- 불균형 데이터를 다루는 방법에 대해 미숙했습니다. 또한, 범주형과 연속형 변수들이 섞여 있는 데이터에 대해 사용할 수 있는 기법들이 존재했는데 이를 적용해보며 성능이 향상 되는지를 확인할 필요가 있어보입니다.
+- 현재는 229화 까지의 데이터 셋을 사용하여 진행하였지만 몇년뒤에 유퀴즈 프로그램이 남아있다면 더 많은 데이터를 사용하여 더 좋은 모델을 만들 수 있지 않았을까 싶습니다.
+- 하이퍼파라메터를 다루는 방법에 대해 미숙했습니다. 아직 하이퍼파라메터의 기능이 무엇인지를 정확이 인지하지 못해 모든 경우를 돌려야하는 점이 최적의 값을 찾는데 오랜 시간을 걸리게 하였고 일부 모델에서는 몇몇 조건을 제외하여 진행하였습니다.
 
 ---
-## 7. 참고 문헌
+## 6. 참고 문헌
 - [나무위키 - 1](https://namu.wiki/w/%EC%9C%A0%20%ED%80%B4%EC%A6%88%20%EC%98%A8%20%EB%8D%94%20%EB%B8%94%EB%9F%AD/%EB%B6%80%EC%A0%9C%20%EB%B0%8F%20%EC%8B%9C%EC%B2%AD%EB%A5%A0)
-- [나무위키 - 2]([http://www.koreanhypertension.org/](https://namu.wiki/w/%EC%9C%A0%20%ED%80%B4%EC%A6%88%20%EC%98%A8%20%EB%8D%94%20%EB%B8%94%EB%9F%AD/%EC%83%81%EA%B8%88%20%EC%88%98%EB%A0%B9%EC%9E%90))
-- [유튜브 api v3]([https://www.kosso.or.kr/](https://console.cloud.google.com/apis/library/youtube.googleapis.com?hl=ko&project=braided-city-312905))
+- [나무위키 - 2]([http://www.koreanhypertension.org/](https://namu.wiki/w/%EC%9C%A0%20%ED%80%B4%EC%A6%88%20%EC%98%A8%20%EB%8D%94%20%EB%B8%94%EB%9F%AD/%EC%83%81%EA%B8%88%20%EC%88%98%EB%A0%B9%EC%9E%90)
+- [유튜브 api v3]([https://www.kosso.or.kr/](https://console.cloud.google.com/apis/library/youtube.googleapis.com?hl=ko&project=braided-city-312905)
 - [캐글]([https://ko.wikipedia.org/wiki/%EB%8B%B9%EB%87%A8%EB%B3%91](https://www.kaggle.com/code/serigne/stacked-regressions-top-4-on-leaderboard)https://www.kaggle.com/code/serigne/stacked-regressions-top-4-on-leaderboard)
