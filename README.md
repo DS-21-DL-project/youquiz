@@ -1,4 +1,4 @@
-![제목을 입력해주세요_-005 (1)](https://github.com/DS-21-DL-project/youquiz/assets/83691399/bbff9d03-b781-4b62-a2a7-550ee9381af3)![제목을-입력해주세요_-001](https://github.com/hojimint/Zero_Base/assets/83691399/959a71e0-e17f-45c0-a72d-e468806b1c43)
+![제목을-입력해주세요_-001](https://github.com/hojimint/Zero_Base/assets/83691399/959a71e0-e17f-45c0-a72d-e468806b1c43)
 
 ---
 ## Introduction
